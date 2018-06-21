@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>BMI計算器</h1>
+<label>身高:</label>
+<input Type="Text"id="high" name="high" value=""> 公尺(請直接將身高單位轉換成公尺)</br>
+<label>體重:</label>
+<input Type="Text"id="kg" name="kg" value=""> 公斤</br>
+<label>BMI:</label>
+<input Type="Text"id="bmi" name="bmi" value=""disabled/> </br>
+<input Type="Button"  value="計算" OnClick="ans()"> </br>
+<label>在臺灣地區，行政院衛生署（今衛生福利部）乃根據其相關研究，於2002年4月公佈臺灣成人肥胖標準</br>BMI＜18.5 為過輕，18.5≦BMI＜24 為正常體重，24≦BMI＜27 為過重，BMI≧27 即為肥胖。</label>
+
+
+<Script > 
+<!-- 
+function ans() 
+{ 
+//取值
+var o1=document.getElementById("high") 
+var o2=document.getElementById("kg") 
+var o3=document.getElementById("bmi") 
+
+o3.value="" 
+
+//判斷是否輸入數值
+var ErrMsg="" 
+if(isNaN(o1.value)||(o1.value=="")) 
+{ 
+ErrMsg=ErrMsg+"請輸入身高"+"\n" 
+o1.value="" 
+} 
+if(isNaN(o2.value)||(o2.value=="")) 
+{ 
+ErrMsg=ErrMsg+"請輸入體重"+"\n" 
+o2.value="" 
+} 
+if(ErrMsg!="") 
+{ 
+alert(ErrMsg) 
+return false; 
+} 
+else 
+{ 
+//使用parseFloat()函式來將文字字串轉換成數值 
+o3.value=parseFloat(o2.value)/(parseFloat(o1.value)*parseFloat(o1.value))
+} 
+} 
+--> 
+</Script> 
+</body>
+</html>
